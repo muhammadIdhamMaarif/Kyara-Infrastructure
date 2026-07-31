@@ -127,7 +127,7 @@ jobs:
 
       # ---------- CodeQL init (manual build to control monorepo behavior) ----------
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
+        uses: github/codeql-action/init@v3.37.3
         with:
           languages: ${{ matrix.language }}
           build-mode: manual
@@ -229,7 +229,7 @@ jobs:
 
       # ---------- Analyze & upload ----------
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
+        uses: github/codeql-action/analyze@v3.37.3
         with:
           category: "/monorepo-${{ matrix.language }}"
           upload: "always"
